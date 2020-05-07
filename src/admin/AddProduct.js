@@ -17,8 +17,7 @@ const AddProduct = () => {
     loading: false,
     error: "",
     createdProduct: "",
-    redirectToProfile: false,
-    formData: ""
+    redirectToProfile: false
   });
 
   const { user, token } = isAuthenticated();
@@ -33,8 +32,7 @@ const AddProduct = () => {
     loading,
     error,
     createdProduct,
-    redirectToProfile,
-    formData
+    redirectToProfile
   } = values;
 
   //load categories and set form data
@@ -45,8 +43,7 @@ const AddProduct = () => {
       } else {
         setValues({
           ...values,
-          categories: data,
-          formData: new FormData()
+          categories: data
         });
       }
     });
@@ -58,7 +55,6 @@ const AddProduct = () => {
 
   const handleChange = name => event => {
     const value = name === "photo" ? event.target.files[0] : event.target.value;
-    formData.set(name, value);
     setValues({ ...values, [name]: value });
   };
 
@@ -66,7 +62,7 @@ const AddProduct = () => {
     event.preventDefault();
     setValues({ ...values, error: "", loading: true });
 
-    createProduct(user._id, token, formData).then(data => {
+    createProduct(user._id, token, values).then(data => {
       if (data.error) {
         setValues({ ...values, error: data.error });
       } else {
@@ -75,16 +71,14 @@ const AddProduct = () => {
           name: "",
           description: "",
           price: "",
-          categories: [],
           category: "",
           shipping: "",
           quantity: "",
           photo: "",
           loading: false,
           error: "",
-          createdProduct: "",
-          redirectToProfile: false,
-          formData: ""
+          createdProduct: data.name,
+          redirectToProfile: false
         });
       }
     });
@@ -165,7 +159,9 @@ const AddProduct = () => {
         />
       </div>
 
-      <button className="btn btn-outline-primary">Create Product</button>
+      <button className="btn btn-outline-primary" type="submit">
+        Create Product
+      </button>
     </form>
   );
 

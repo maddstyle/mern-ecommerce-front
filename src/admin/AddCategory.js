@@ -17,15 +17,17 @@ const AddCategory = () => {
     setName(e.target.value);
   };
 
-  const clickSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
     setError("");
     setSuccess(false);
     // make request to api to create category
     createCategory(user._id, token, { name }).then(data => {
       if (data.error) {
+        console.log("ERROR");
         setError(true);
       } else {
+        console.log("NOT ERROR");
         setError("");
         setSuccess(true);
       }
@@ -33,7 +35,7 @@ const AddCategory = () => {
   };
 
   const newCategoryForm = () => (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label className="text-muted">Name</label>
         <input
