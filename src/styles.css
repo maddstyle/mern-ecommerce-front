@@ -1,12 +1,23 @@
 /* *border radius */
-
-.btn, jumbotron, .nav :hover {
+ jumbotron, .nav :hover {
   border-radius: 0px;
 }
 
 /* * product image on card */
-
+ 
 .product-img {
   min-height: 100px;
+}
+.jumbotron {
+  background-image: url("/images/rolex_movement.jpg");
+  background-size: cover;
+  color: lightgoldenrodyellow;
+  font-family: "Dancing Script", cursive;
+}
+
+body {
+  background: #ECECEC;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
 }
 

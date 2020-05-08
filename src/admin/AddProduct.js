@@ -86,9 +86,9 @@ const AddProduct = () => {
 
   const newPostForm = () => (
     <form className="mb-3" onSubmit={clickSubmit}>
-      <h4>Post Photo</h4>
+      <h6> Upload Image</h6>
       <div className="form-group">
-        <label className="btn btn-secondary">
+        <label className="btn btn-info btn-sm">
           <input
             onChange={handleChange("photo")}
             type="file"
@@ -140,14 +140,14 @@ const AddProduct = () => {
         </select>
       </div>
 
-      <div className="form-group">
+      {/* <div className="form-group">
         <label className="text-muted">Shipping</label>
         <select onChange={handleChange("shipping")} className="form-control">
           <option>Please Select</option>
           <option value="0">No</option>
           <option value="1">Yes</option>
         </select>
-      </div>
+      </div> */}
 
       <div className="form-group">
         <label className="text-muted">Quantity</label>
@@ -159,7 +159,7 @@ const AddProduct = () => {
         />
       </div>
 
-      <button className="btn btn-outline-primary" type="submit">
+      <button className="btn btn-info" type="submit">
         Create Product
       </button>
     </form>
@@ -192,8 +192,8 @@ const AddProduct = () => {
 
   return (
     <Layout
-      title="Add a new product"
-      description={`Hello ${user.name}, ready to add a new product?`}
+      title="Add new product"
+      description={`Hello ${user.name}, list new watch?`}
     >
       <div className="row">
         <div className="col-md-8 offset-md-2">
