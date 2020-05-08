@@ -1,5 +1,5 @@
 /* *border radius */
- jumbotron, .nav :hover {
+ .jumbotron, .nav :hover {
   border-radius: 0px;
 }
 
@@ -9,6 +9,8 @@
   min-height: 100px;
 }
 .jumbotron {
+  width: 30wh;
+  height: 40vh;
   background-image: url("/images/rolex_movement.jpg");
   background-size: cover;
   color: lightgoldenrodyellow;
@@ -21,3 +23,7 @@ body {
   font-size: 14px;
 }
 
+.card-header {
+  font-size: 18px;
+  font-weight: bold
+}

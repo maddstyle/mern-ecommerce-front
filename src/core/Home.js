@@ -39,14 +39,14 @@ const Home = () => {
             description="The only place you need to buy and sell your luxury timepiece."
             className="container-fluid"
         >
-            <h2 className="mb-4">New Arrivals</h2>
+            <h4 className="mb-4">New Arrivals</h4>
             <div className="row">
                 {productsByArrival.map((product, i) => (
                     <Card key={i} product={product} />
                 ))}
             </div>
 
-            <h2 className="mb-4">Best Sellers</h2>
+            <h4 className="mb-4">Best Sellers</h4>
             <div className="row">
                 {productsBySell.map((product, i) => (
                     <Card key={i} product={product} />

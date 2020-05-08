@@ -10,8 +10,8 @@ const AdminDashboard = () => {
 
   const adminLinks = () => {
     return (
-      <div className="card">
-        <h4 className="class-header">Admin Links</h4>
+      <div className="shadow card">
+        <div className="card-header">Admin Links</div>
         <ul className="list-group">
           <li className="list-group-item">
             <Link className="nav-link" to="/create/category">
@@ -30,8 +30,8 @@ const AdminDashboard = () => {
 
   const adminInfo = () => {
     return (
-      <div className="card mb-5">
-        <h3 className="card-header">Admin Information</h3>
+      <div className="shadow card mb-5">
+        <div className="card-header">User Information</div>
         <ul className="list-group">
           <li className="list-group-item">{name}</li>
           <li className="list-group-item">{email}</li>

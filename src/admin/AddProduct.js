@@ -140,14 +140,14 @@ const AddProduct = () => {
         </select>
       </div>
 
-      {/* <div className="form-group">
+      <div className="form-group">
         <label className="text-muted">Shipping</label>
         <select onChange={handleChange("shipping")} className="form-control">
           <option>Please Select</option>
           <option value="0">No</option>
           <option value="1">Yes</option>
         </select>
-      </div> */}
+      </div>
 
       <div className="form-group">
         <label className="text-muted">Quantity</label>
@@ -179,14 +179,14 @@ const AddProduct = () => {
       className="alert alert-info"
       style={{ display: createdProduct ? "" : "none" }}
     >
-      <h2>{`${createdProduct}`} has been created!</h2>
+      <h5>{`${createdProduct}`} has been created!</h5>
     </div>
   );
 
   const showLoading = () =>
     loading && (
       <div className="alert alert-success">
-        <h2>Loading</h2>
+        <h5>Loading</h5>
       </div>
     );
 
