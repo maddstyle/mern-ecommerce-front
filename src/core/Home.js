@@ -35,7 +35,7 @@ const Home = () => {
 
     return (
         <Layout        
-            title="Welcome to WatchList "
+            title="Welcome to WatchLIST "
             description="The only place you need to buy and sell your luxury timepiece."
             className="container-fluid"
         >

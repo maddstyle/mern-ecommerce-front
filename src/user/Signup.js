@@ -95,7 +95,7 @@ const Signup = () => {
     return (
         <Layout
             title="Signup"
-            description="Signup to WatchList"
+            description="Signup to WatchLIST"
             className="container col-md-8 offset-md-2"
         >
             {showSuccess()}
