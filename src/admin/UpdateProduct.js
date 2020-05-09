@@ -247,4 +247,3 @@ const UpdateProduct = ({ match }) => {
 };
 
 export default UpdateProduct;
-

@@ -38,7 +38,7 @@ const Cart = () => {
     return (
         <Layout
             title="Shopping Cart"
-            description="Manage your cart items. Add, remove item or continue shopping."
+            description="Manage your cart items. Add, remove or continue shopping."
             className="container-fluid"
         >
             <div className="row">
@@ -47,10 +47,7 @@ const Cart = () => {
                 </div>
 
                 <div className="col-6">
-                    <p>
-                        show checkout options/shipping address/total/update
-                        quantity
-                    </p>
+                    <h2 className="mb-4">Your cart summary</h2>
                 </div>
             </div>
         </Layout>
